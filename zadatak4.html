@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        function calc(){
+            var broj1=parseFloat(document.getElementById('broj1').value);
+            var broj2=parseFloat(document.getElementById('broj2').value);
+            var operator=document.getElementById('operatori').value;
+            if(operator ==='sabiranje'){
+                document.getElementById('rezultat').value=broj1+broj2;
+            }
+            if(operator ==='oduzimanje'){
+                document.getElementById('rezultat').value=broj1-broj2;
+            }
+            if(operator==='mnozenje'){
+                 document.getElementById('rezultat').value=broj1*broj2;
+            }
+            if(operator==='deljenje'){
+                document.getElementById('rezultat').value=broj1/broj2;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h2>JavaScript kalkulator</h2>
+<input type="text" id="broj1"/><br/><br/>
+<input type="text" id="broj2"/><br/><br/>
+
+
+<select id="operatori">
+<option value="sabiranje">Sabiranje</option>
+<option value="oduzimanje">Oduzimanje</option>
+<option value="mnozenje">Mnozenje</option>
+<option value="deljenje">Deljenje</option>
+</select>
+<button onclick="calc();">=</button>
+<input type="text" id="rezultat"/>
+
+
+</body>
